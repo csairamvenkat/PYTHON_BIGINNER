@@ -1,23 +1,38 @@
-a,b=5,6
-print(a)
-print(b)
-
-x=8
-print(x/2)  #float division
-print(x//2) # int division
-y=5
-print(y/2)
-print(y//2)
+#assingment operator
+x=2
+x=x+2
+print(x)
+x-=2         #output:0
+print(x)
+x/=2
+print(x)      #o:1.0
+x*=6
+print(x)      #o:6.0
+x//=2
+print(x)      #o:3.0
 
 #unary operator
-n=5
-m=-n 
-print(m)
+m=7
+n=-(m)
+print(n)         #o:-7
 
-#relational Operator-->  <,>,==
-
-#logical operator -->and,or,none
-a,b=5,6
-print(a>b)
+#relational operators
+a=5
+b=6
 print(a<b)
-#logical operators can be works as in  truth table.
+print(a>b)
+print(a==b)
+print(a!=b)
+print(a>=b)
+print(a<=b)
+
+#logical operator
+a=5
+b=7
+print(a<8 and b<9)
+print(a<8 and b>9)
+print(a<8 or b>9)
+print(a<8 or b<9)
+print(a>9 or b>9)
+c=False
+print(not c)
