@@ -153,3 +153,6 @@
 
 # # .ipynb (interactive python note book) and .py are file extensions
 print(type(str(10.19))) #'10.19'
+5+3
+a=_+5 # _ is used getting previous evalued result
+print(a)
