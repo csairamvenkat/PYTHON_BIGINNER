@@ -6,7 +6,7 @@ def translate_text(text, dest_language):
     return translator.translate(text)
 
 def main():
-    st.title("Language Translator")
+    st.title("Language Translator From English")
 
     text = st.text_area("Enter text to translate:")
     languages = GoogleTranslator().get_supported_languages()
