@@ -1,0 +1,12 @@
+python -m venv venv
+source venv\Scripts\activate # For Linux venv/bin/activate
+pip install streamlit
+
+
+pip freeze > requirements.txt
+
+
+#!/bin/bash
+streamlit run AutoDetectLangandTranslate.py --server.port=8000 --server.address=0.0.0.0
+
+
