@@ -1,6 +1,6 @@
 from tkinter import *
 import random, string
-import pyperclip
+import  
 
 root = Tk()
 root.geometry("400x400")
