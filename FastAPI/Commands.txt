@@ -1,0 +1,22 @@
+Virtual Env Creation
+====================
+python3 -m venv fast-api
+=========================
+
+Activate Virtual Environment
+==============================
+fast-api\scripts\activate.bat
+================================ 
+pip3 install uvicorn
+
+
+To start Application
+=====================
+uvicorn main:app --reload  # here main.py is the file that needs to be executed
+
+
+
+# Fast Api reads file line by line  so for any scenario where params/dynamic is not present  ,they should be b4 dynamic routing of same partial path .If /blog/unpublished  is present after dynamic value route then it throws error.
+
+http://127.0.0.1:8000/docs --runs the swagger api
+http://127.0.0.1:8000/redoc--runs the redoc ui
