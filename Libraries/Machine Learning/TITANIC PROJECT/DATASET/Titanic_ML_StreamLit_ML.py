@@ -5,7 +5,7 @@ import streamlit as st
 # titanic = pd.read_csv('../input/train.csv', header = 0, dtype={'Age': np.float64})
 titanic = pd.read_csv(r'C:\Users\sai.venkat\OneDrive\DataScience\Python\PYTHON_BIGINNER\Libraries\Machine Learning\TITANIC PROJECT\DATASET\titanic dataset.csv', header = 0, dtype={'Age': np.float64})
 titanic.tail()
-print(titanic.isnull().sum())
+# print(titanic.isnull().sum())
 titanic.describe()
 del titanic["Name"]
 titanic.head()
@@ -29,10 +29,10 @@ titanic.head()
 del titanic["Sex"]
 titanic.head()
 
-print("Updated Null Sum   \n ",titanic.isnull().sum())
+# print("Updated Null Sum   \n ",titanic.isnull().sum())
 
 meanS= titanic[titanic.Survived==1].Age.mean()
-meanS
+# meanS
 
 titanic["age"]=np.where(pd.isnull(titanic.Age) & titanic["Survived"]==1  ,meanS, titanic["Age"])
 titanic.head()
@@ -41,7 +41,7 @@ titanic.isnull().sum()
 
 # Finding the mean age of "Not Survived" people
 meanNS=titanic[titanic.Survived==0].Age.mean()
-meanNS
+# meanNS
 
 titanic.age.fillna(meanNS,inplace=True)
 titanic.head()
@@ -61,25 +61,25 @@ survivedQ1 = titanic[(titanic["Embarked"] == "Q") & (titanic["Survived"] == 1)].
 
 survivedC = titanic[(titanic.Embarked == 'C') & (titanic.Survived == 1)].shape[0]
 survivedS = titanic[(titanic.Embarked == 'S')&(titanic.Survived == 1)].shape[0]
-print(survivedQ)
-print(survivedQ1)
-print(survivedC)
-print(survivedS)
+# print(survivedQ)
+# print(survivedQ1)
+# print(survivedC)
+# print(survivedS)
 
 
 survivedQ = titanic[(titanic.Embarked == 'Q') & (titanic.Survived == 0)].shape[0]
 survivedC = titanic[(titanic.Embarked == 'C')&(titanic.Survived == 0)].shape[0]
 survivedS = titanic[(titanic.Embarked == 'S')&(titanic.Survived == 0)].shape[0]
-print(survivedQ)
-print(survivedC)
-print(survivedS)
+# print(survivedQ)
+# print(survivedC)
+# print(survivedS)
 
 
 titanic.dropna(inplace=True)
 titanic.head()
 
 
-print("Updated Sum 2 \n ",titanic.isnull().sum())
+# print("Updated Sum 2 \n ",titanic.isnull().sum())
 
 #Renaming "age" and "gender" columns
 titanic.rename(columns={'age':'Age'}, inplace=True)
@@ -114,8 +114,8 @@ males = (titanic['Sex'] == 1).sum()
 #Summing up all the values of column gender with a 
 #condition for male and similary for females
 females = (titanic['Sex'] == 2).sum()
-print(males)
-print(females)
+# # print(males)
+# # print(females)
 p = [males, females]
 # plt.pie(p,    #giving array
 #        labels = ['Male', 'Female'], #Correspndingly giving labels
@@ -138,13 +138,13 @@ st.pyplot(fig)
 
 # More Precise Pie Chart
 MaleS=titanic[(titanic.Sex==1) & (titanic.Survived==1)].shape[0]
-print(MaleS)
+# print(MaleS)
 MaleN=titanic[(titanic.Sex==1) & (titanic.Survived==0)].shape[0]
-print(MaleN)
+# print(MaleN)
 FemaleS=titanic[(titanic.Sex==2) & (titanic.Survived==1)].shape[0]
-print(FemaleS)
+# # print(FemaleS)
 FemaleN=titanic[(titanic.Sex==2) & (titanic.Survived==0)].shape[0]
-print(FemaleN)
+# # print(FemaleN)
 
 
 chart=[MaleS,MaleN,FemaleS,FemaleN]
