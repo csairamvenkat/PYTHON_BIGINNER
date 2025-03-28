@@ -109,3 +109,17 @@ variance = regressor.score(X_test, Y_test)
 variance
 
 
+# Feature Scaling
+# Using Standardization tecyhnique  values range from -3 to 3
+
+from sklearn.preprocessing import Normalizer
+sc_X=Standa
+
+
+
+
+
+
+
+
+
