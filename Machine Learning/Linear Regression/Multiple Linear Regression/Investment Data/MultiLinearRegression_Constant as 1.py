@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 # y=m1x1+m2x2+m3x3+c-->Multi linear regression model
 
 # Use case  Identify good stocks for investment
-dataset=pd.read_csv(r"C:\Users\sai.venkat\OneDrive\DataScience\Python\PYTHON_BIGINNER\Libraries\Machine Learning\Multiple Linear Regression\Investment Data\Investment.csv")
+dataset=pd.read_csv(r"C:\Users\sai.venkat\OneDrive\DataScience\Python\PYTHON_BIGINNER\Libraries\Machine Learning\Linear Regression\Multiple Linear Regression\Investment Data\Investment.csv")
 X=dataset.iloc[:,:-1]  # independent variable
 Y=dataset.iloc[:,4]  #dependent variable
  # Transformer  
@@ -109,11 +109,6 @@ variance = regressor.score(X_test, Y_test)
 variance
 
 
-# Feature Scaling
-# Using Standardization tecyhnique  values range from -3 to 3
-
-from sklearn.preprocessing import Normalizer
-sc_X=Standa
 
 
 

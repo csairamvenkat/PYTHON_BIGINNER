@@ -7,7 +7,7 @@ import pandas as pd
 
 # IMPORT THE DATASET
 
-dataset = pd.read_csv(r"C:\Users\A3MAX SOFTWARE TECH\Desktop\WORK\1. KODI WORK\1. NARESH\2. EVENING BATCH\N_Batch -- 7.00PM -- Ju25\3. MAR\18th - ML\5. Data preprocessing\Data.csv")
+dataset = pd.read_csv(r"C:\Users\sai.venkat\OneDrive\DataScience\Python\PYTHON_BIGINNER\Libraries\Machine Learning\5. Data preprocessing\Data.csv")
 
 # INDEPENDENT VARIABLE
 X = dataset.iloc[:, :-1].values	
@@ -43,5 +43,24 @@ y = labelencoder_y.fit_transform(y)
 from sklearn.model_selection import train_test_split
 
 X_train,X_test,y_train,y_test = train_test_split(X, y,train_size=0.8, random_state=0) 
+
+
+#FEATURE SCALING 
+
+from sklearn.preprocessing import Normalizer
+
+sc_X = Normalizer() 
+
+X_train = sc_X.fit_transform(X_train)
+
+X_test = sc_X.transform(X_test)
+
+#---------------------------------------------------------------------
+
+
+
+
+
+
 
 
