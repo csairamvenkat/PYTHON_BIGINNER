@@ -201,6 +201,9 @@ plt.ylabel('Salary')
 plt.show()
 
 
+# Note : Degrees are applied based on company standards how much they pay for the experience.
+
+
 
 
 
