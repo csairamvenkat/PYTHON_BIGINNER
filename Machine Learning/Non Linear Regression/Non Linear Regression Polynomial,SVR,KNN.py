@@ -64,6 +64,7 @@ plt.show()
 #degree 2
 
 from  sklearn.preprocessing import PolynomialFeatures
+# Hyper parameter Tuning
 poly_reg=PolynomialFeatures(degree=2)
 x_poly=poly_reg.fit_transform(x)
 poly_reg.fit(x_poly,y)
@@ -202,6 +203,70 @@ plt.show()
 
 
 # Note : Degrees are applied based on company standards how much they pay for the experience.
+
+
+
+# Support Vector Regression Model (SVR)
+
+# Here dependent variable is continious so we used svr
+
+from sklearn.svm import SVR  #( ctrl+i  for help)
+svr_reg=SVR()
+svr_reg.fit(x,y)   # here we considered kernel,gamma=auto and c=1.0
+svr_model_pred=svr_reg.predict([[6.5]])
+print(svr_model_pred)
+
+
+
+
+# Hyper parameter Tuning
+
+from sklearn.svm import SVR  #( ctrl+i  for help)
+svr_reg=SVR(kernel="poly",degree=4,gamma="auto",C=1.0)
+svr_reg.fit(x,y)   # here we considered kernel,gamma=auto and c=1.0
+svr_model_pred_hyperparamtuning=svr_reg.predict([[6.5]])
+print(svr_model_pred_hyperparamtuning)
+
+
+
+# Try for different Kernel,degree and gamma and c
+
+
+
+# K-Nearest Neighbour
+
+#paramtere Tuning
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg=KNeighborsRegressor()
+knn_reg.fit(x,y)
+knn_model_pred=svr_reg.predict([[6.5]])
+print(knn_model_pred)
+
+
+# hyper parameter tuning
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg=KNeighborsRegressor(n_neighbors=4,weights='uniform')
+knn_reg.fit(x,y)
+knn_model_pred_hyperparam_tuning=svr_reg.predict([[6.5]])
+print(knn_model_pred_hyperparam_tuning)
+
+
+
+
+print("simplelinear",simplelinear)
+print("poly_pred_degree2",poly_pred_degree2)
+print('poly_pred_degree3',poly_pred_degree3)
+print('poly_pred_degree4',poly_pred_degree4)
+print('poly_pred_degree5',poly_pred_degree5)
+print('poly_pred_degree6',poly_pred_degree6)
+print('svr_model_pred',svr_model_pred)
+print('svr_model_pred_hyperparamtuning',svr_model_pred_hyperparamtuning)
+print('knn_model_pred',knn_model_pred)
+print("knn_model_pred_hyperparam_tuning",knn_model_pred_hyperparam_tuning)
+
+
+
 
 
 
