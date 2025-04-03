@@ -222,15 +222,25 @@ print(svr_model_pred)
 # Hyper parameter Tuning
 
 from sklearn.svm import SVR  #( ctrl+i  for help)
-svr_reg=SVR(kernel="poly",degree=4,gamma="auto",C=1.0)
-svr_reg.fit(x,y)   # here we considered kernel,gamma=auto and c=1.0
-svr_model_pred_hyperparamtuning=svr_reg.predict([[6.5]])
-print(svr_model_pred_hyperparamtuning)
+svr_reg_poly=SVR(kernel="poly",degree=4,gamma="auto",C=1.0)
+svr_reg_poly.fit(x,y)   # here we considered kernel,gamma=auto and c=1.0
+svr_model_pred_hyperparamtuning_poly=svr_reg_poly.predict([[6.5]])
+print(svr_model_pred_hyperparamtuning_poly)
 
 
 
 # Try for different Kernel,degree and gamma and c
+from sklearn.svm import SVR  #( ctrl+i  for help)
+svr_reg_linear=SVR(kernel="linear",degree=5,gamma="auto",C=2.0)
+svr_reg_linear.fit(x,y)   # here we considered kernel,gamma=auto and c=1.0
+svr_model_pred_hyperparamtuning_linear=svr_reg_linear.predict([[6.5]])
+print(svr_model_pred_hyperparamtuning_linear)
 
+from sklearn.svm import SVR  #( ctrl+i  for help)
+svr_reg_rbf=SVR(kernel="rbf",degree=5,gamma="auto",C=1.0)
+svr_reg_rbf.fit(x,y)   # here we considered kernel,gamma=auto and c=1.0
+svr_model_pred_hyperparamtuning_rbf=svr_reg_rbf.predict([[6.5]])
+print(svr_model_pred_hyperparamtuning_rbf)
 
 
 # K-Nearest Neighbour
@@ -240,16 +250,31 @@ print(svr_model_pred_hyperparamtuning)
 from sklearn.neighbors import KNeighborsRegressor
 knn_reg=KNeighborsRegressor()
 knn_reg.fit(x,y)
-knn_model_pred=svr_reg.predict([[6.5]])
+knn_model_pred=knn_reg.predict([[6.5]])
 print(knn_model_pred)
 
 
 # hyper parameter tuning
+
 from sklearn.neighbors import KNeighborsRegressor
 knn_reg=KNeighborsRegressor(n_neighbors=4,weights='uniform')
 knn_reg.fit(x,y)
-knn_model_pred_hyperparam_tuning=svr_reg.predict([[6.5]])
+knn_model_pred_hyperparam_tuning=knn_reg.predict([[6.5]])
 print(knn_model_pred_hyperparam_tuning)
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg=KNeighborsRegressor(n_neighbors=10,weights='uniform')
+knn_reg.fit(x,y)
+knn_model_pred_hyperparam_tuning_10neighbour=knn_reg.predict([[6.5]])
+print(knn_model_pred_hyperparam_tuning_10neighbour)
+
+
+from sklearn.neighbors import KNeighborsRegressor
+knn_reg=KNeighborsRegressor(n_neighbors=25,weights='uniform')
+knn_reg.fit(x,y)
+knn_model_pred_hyperparam_tuning_25neighbour=knn_reg.predict([[6.5]])
+print(knn_model_pred_hyperparam_tuning_25neighbour)
+
 
 
 
@@ -261,13 +286,13 @@ print('poly_pred_degree4',poly_pred_degree4)
 print('poly_pred_degree5',poly_pred_degree5)
 print('poly_pred_degree6',poly_pred_degree6)
 print('svr_model_pred',svr_model_pred)
-print('svr_model_pred_hyperparamtuning',svr_model_pred_hyperparamtuning)
-print('knn_model_pred',knn_model_pred)
+print('svr_model_pred_hyperparamtuning_poly',svr_model_pred_hyperparamtuning_poly)
 print("knn_model_pred_hyperparam_tuning",knn_model_pred_hyperparam_tuning)
-
-
-
-
+print('svr_model_pred_hyperparamtuning_rbf',svr_model_pred_hyperparamtuning_rbf)
+print('svr_model_pred_hyperparamtuning_linear',svr_model_pred_hyperparamtuning_linear)
+print('knn_model_pred',knn_model_pred)
+print('knn_model_pred_hyperparam_tuning_10neighbour',knn_model_pred_hyperparam_tuning_10neighbour)
+print('knn_model_pred_hyperparam_tuning_25neighbour',knn_model_pred_hyperparam_tuning_25neighbour)
 
 
 
