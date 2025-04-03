@@ -269,11 +269,49 @@ knn_model_pred_hyperparam_tuning_10neighbour=knn_reg.predict([[6.5]])
 print(knn_model_pred_hyperparam_tuning_10neighbour)
 
 
-from sklearn.neighbors import KNeighborsRegressor
-knn_reg=KNeighborsRegressor(n_neighbors=25,weights='uniform')
-knn_reg.fit(x,y)
-knn_model_pred_hyperparam_tuning_25neighbour=knn_reg.predict([[6.5]])
-print(knn_model_pred_hyperparam_tuning_25neighbour)
+#from sklearn.neighbors import KNeighborsRegressor
+#knn_reg=KNeighborsRegressor(n_neighbors=25,weights='uniform')
+#knn_reg.fit(x,y)
+#knn_model_pred_hyperparam_tuning_25neighbour=knn_reg.predict([[6.5]])
+#print(knn_model_pred_hyperparam_tuning_25neighbour)
+
+
+
+
+#  Decission Tree Regression Algo
+# Performance Matrics Of Regression
+from sklearn.tree import DecisionTreeRegressor
+dt_reg=DecisionTreeRegressor()  
+dt_reg.fit(x,y)
+dt_model_pred=dt_reg.predict([[6.5]])
+print(dt_model_pred)
+
+
+# Hyper parameter tuning
+
+from sklearn.tree import DecisionTreeRegressor
+dt_reg=DecisionTreeRegressor(criterion='absolute_error',splitter='random')  
+dt_reg.fit(x,y)
+dt_model_pred_absolute_error=dt_reg.predict([[6.5]])
+print(dt_model_pred_absolute_error)
+
+#Random Forest
+from sklearn.ensemble import RandomForestRegressor
+rf_reg=RandomForestRegressor()  
+rf_reg.fit(x,y)
+rf_model_pred=rf_reg.predict([[6.5]])
+print(rf_model_pred)
+
+# hyper parameter tuning
+# random_state=0 prediction will be constant.
+from sklearn.ensemble import RandomForestRegressor
+rf_reg=RandomForestRegressor(random_state=0)  
+rf_reg.fit(x,y)
+rf_model_pred_random_state=rf_reg.predict([[6.5]])
+print(rf_model_pred_random_state)
+
+
+
 
 
 
@@ -292,8 +330,11 @@ print('svr_model_pred_hyperparamtuning_rbf',svr_model_pred_hyperparamtuning_rbf)
 print('svr_model_pred_hyperparamtuning_linear',svr_model_pred_hyperparamtuning_linear)
 print('knn_model_pred',knn_model_pred)
 print('knn_model_pred_hyperparam_tuning_10neighbour',knn_model_pred_hyperparam_tuning_10neighbour)
-print('knn_model_pred_hyperparam_tuning_25neighbour',knn_model_pred_hyperparam_tuning_25neighbour)
-
+#print('knn_model_pred_hyperparam_tuning_25neighbour',knn_model_pred_hyperparam_tuning_25neighbour)
+print(dt_model_pred)
+print(dt_model_pred_absolute_error)
+print(rf_model_pred)
+print(rf_model_pred_random_state)
 
 
 
