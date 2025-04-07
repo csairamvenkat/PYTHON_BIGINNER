@@ -1,0 +1,49 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px 0;
+}
+
+/* Amazon color palette */
+:root {
+  --amazon-primary: #131921;
+  --amazon-secondary: #232f3e;
+  --amazon-yellow: #febd69;
+  --amazon-orange: #ff9900;
+  --amazon-button: #f0c14b;
+  --amazon-button-hover: #ddb347;
+  --amazon-link: #007185;
+}
+
+/* Common button styles */
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: var(--amazon-button);
+  color: #111;
+}
+
+.btn-primary:hover {
+  background-color: var(--amazon-button-hover);
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #111;
+  border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+  background-color: #e7e7e7;
+}
