@@ -6,7 +6,7 @@ import io
 # Set Streamlit page config
 st.set_page_config(page_title="Logistic Regression Predictor", layout="centered")
 
-st.title("📊 House Purchase Prediction using Logistic Regression Classification Algorithm ")
+st.title("📊 House Purchase Prediction Using Logistic Regression Classification Algorithm ")
 
 # Load the model and scaler
 @st.cache_resource
