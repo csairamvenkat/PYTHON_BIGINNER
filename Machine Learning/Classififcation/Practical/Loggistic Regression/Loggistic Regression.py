@@ -9,9 +9,9 @@ import pandas as pd
 import numpy as np
 
 dataset=pd.read_csv(r'C:\Users\sai.venkat\OneDrive\DataScience\Python\PYTHON_BIGINNER\Machine Learning\Classififcation\Practical\Loggistic Regression\Input Data To Train\logit classification.csv')
-# Dependent Variable
+# InDependent Variable
 x=dataset.iloc[:,[2,3]].values
-#independent variable
+#Dependent variable
 y=dataset.iloc[:,-1].values
 
 from sklearn.model_selection import train_test_split
