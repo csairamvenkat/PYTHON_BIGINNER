@@ -62,7 +62,7 @@ print("Confusion Matrix :",cm)
 # Model Accuracy
 from sklearn.metrics import accuracy_score
 ac=accuracy_score(y_test,y_pred)
-print(ac)
+print("Accuracy : ",ac)
 
 # Model Accuracy , Bias and variance is used to get overfitting or underfitting
 
