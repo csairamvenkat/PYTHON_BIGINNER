@@ -8,7 +8,7 @@ Created on Tue Apr  8 19:31:14 2025
 import pandas as pd
 import numpy as np
 
-dataset=pd.read_csv(r'C:\Users\sai.venkat\OneDrive\DataScience\Python\PYTHON_BIGINNER\Machine Learning\Classififcation\Practical\Loggistic Regression\Input Data To Train\logit classification.csv')
+dataset=pd.read_csv(r'C:\Users\sai.venkat\OneDrive\DataScience\Python\PYTHON_BIGINNER\Machine Learning\Classification\Practical\Loggistic Regression\Input Data To Train\logit classification.csv')
 # InDependent Variable
 x=dataset.iloc[:,[2,3]].values
 #Dependent variable
@@ -79,7 +79,16 @@ print("variance : ",variance)
 
 from sklearn.metrics import classification_report
 cr=classification_report(y_test,y_pred)
-print('cr :',cr)
+print('classification report :',cr)
+
+
+# Random state=0 gives max accuracy
+
+print("Confusion Matrix :",cm)
+print("Accuracy : ",ac)
+print('bias :',bias)
+print("variance : ",variance)
+print('classification report :',cr)
 
 
 # All Ml models should be scalled for better model accuracy
