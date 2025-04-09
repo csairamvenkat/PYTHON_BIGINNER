@@ -112,6 +112,8 @@ ds2=ds1.copy()
 
 ds1=ds1.iloc[:,[3,4]].values
 
+# Scalling shd be done for test data aswell to get accurate predictions
+
 from sklearn.preprocessing import StandardScaler
 sc=StandardScaler()
 M=sc.fit_transform(ds1)
