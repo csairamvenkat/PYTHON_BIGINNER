@@ -8,7 +8,7 @@ Created on Tue Apr  8 19:31:14 2025
 import pandas as pd
 import numpy as np
 
-dataset=pd.read_csv(r'C:\Users\sai.venkat\OneDrive\DataScience\Python\PYTHON_BIGINNER\Machine Learning\Classification\Practical\Loggistic Regression\Input Data To Train\logit classification.csv')
+dataset=pd.read_csv(r'C:\Users\sai.venkat\OneDrive\DataScience\Python\PYTHON_BIGINNER\Machine Learning\Classification\Practical\Loggistic Regression\logit classification.csv')
 # InDependent Variable
 x=dataset.iloc[:,[2,3]].values
 #Dependent variable
@@ -90,33 +90,58 @@ print('bias :',bias)
 print("variance : ",variance)
 print('classification report :',cr)
 
-
+import os 
+os.getcwd()
 # All Ml models should be scalled for better model accuracy
 
 # If underfitting /over fitting occurs we use cross validation technique
 
-
-
-import pickle
 import os
 
-save_dir =r"C:\Users\sai.venkat\OneDrive\DataScience\Python\PYTHON_BIGINNER\Machine Learning\Classififcation\Practical\Loggistic Regression\Pickle Files"
+# Custom path
+custom_path = r'C:\Users\sai.venkat\OneDrive\DataScience\Python\PYTHON_BIGINNER\Machine Learning\Classification\Practical\Loggistic Regression'
 
-# Create the directory if it doesn't exist
-os.makedirs(save_dir, exist_ok=True)
+# Change the working directory
+os.chdir(custom_path)
 
 
 
-# Save the trained logistic regression model
+#future predcictions
+ds1=pd.read_csv(r'C:\Users\sai.venkat\OneDrive\DataScience\Python\PYTHON_BIGINNER\Machine Learning\Classification\Practical\Loggistic Regression\final1-PredictmodelGenerated.csv')
+ds2=ds1.copy()
+
+ds1=ds1.iloc[:,[3,4]].values
+
+from sklearn.preprocessing import StandardScaler
+sc=StandardScaler()
+M=sc.fit_transform(ds1)
+
+y_pred1=pd.DataFrame()
+
+ds2['y_pred1']=classifier.predict(M)
+
+ds2.to_csv('pred_model.csv')
+
+
+
+# Confirm the change
+print("✅ Working directory changed to:", os.getcwd())
+
+import pickle
+
+# Save the model
 with open('logistic_model.pkl', 'wb') as model_file:
     pickle.dump(classifier, model_file)
-    file_path = os.path.join(save_dir, 'logistic_model.pkl')
-# Save the scaler (optional but useful when deploying the model)
+
+# Save the scaler
 with open('scaler.pkl', 'wb') as scaler_file:
     pickle.dump(sc, scaler_file)
-    file_path = os.path.join(save_dir, 'scaler.pkl')
 
-print("Model and scaler saved as 'logistic_model.pkl' and 'scaler.pkl'")
+print("✅ Model and scaler saved as 'logistic_model.pkl' and 'scaler.pkl'")
+
+
+
+
 
 
 
