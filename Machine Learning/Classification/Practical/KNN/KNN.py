@@ -51,7 +51,7 @@ y_pred=classifier.predict(x_test)
 
 
 # Initialize KNN with k=3
-knn = KNeighborsClassifier(n_neighbors=5,p=1)
+knn = KNeighborsClassifier(n_neighbors=10,p=1)
 
 # Train the model
 knn.fit(x_train, y_train)
