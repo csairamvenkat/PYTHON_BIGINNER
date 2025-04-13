@@ -156,6 +156,56 @@ print("✅ Model and scaler saved as 'logistic_model.pkl' and 'scaler.pkl'")
 
 
 
+kernels = ['sigmoid', 'poly', 'rbf', 'linear']
+gammas = ['auto', 'scale']
+degree_range = range(1, 11)
+c_range = range(1, 11)
+# Collect results
+results = []
+
+# Loop through combinations
+for kernel in kernels:
+    for gamma in gammas:
+        for C in c_range:
+            # For 'poly' kernel, loop through degrees
+            if kernel == 'poly':
+                for degree in degree_range:
+                    model = SVC(kernel=kernel, gamma=gamma, C=C, degree=degree)
+                    model.fit(x_train, y_train)
+                    predictions = model.predict(x_test)
+                    acc = accuracy_score(y_test, predictions)
+               #     print(f"Kernel: {kernel}, Gamma: {gamma}, C: {C}, Degree: {degree}, Accuracy: {acc:.4f}")
+                    results.append({
+                     'Kernel': kernel,
+                     'Gamma': gamma,
+                     'C': C,
+                     'Degree': degree,
+                     'Accuracy': acc
+                 })
+            else:
+                model = SVC(kernel=kernel, gamma=gamma, C=C)
+                model.fit(x_train, y_train)
+                predictions = model.predict(x_test)
+                acc = accuracy_score(y_test, predictions)
+              #  print(f"Kernel: {kernel}, Gamma: {gamma}, C: {C}, Accuracy: {acc:.4f}")
+                results.append({
+                     'Kernel': kernel,
+                     'Gamma': gamma,
+                     'C': C,
+                     'Degree': degree,
+                     'Accuracy': acc
+                 })
+                # Create DataFrame and write to CSV
+df = pd.DataFrame(results)
+os.chdir(custom_path)
+df.to_csv('svm_hyperparameter_results.csv', index=False)
+
+print("Results written to svm_hyperparameter_results.csv")
+
+results.sort(reverse=True)
+
+# select topmost accuracy and with hyper param tuned
+
 
 
 
