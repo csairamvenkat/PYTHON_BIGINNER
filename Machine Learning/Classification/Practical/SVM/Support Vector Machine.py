@@ -174,7 +174,7 @@ for kernel in kernels:
                     model.fit(x_train, y_train)
                     predictions = model.predict(x_test)
                     acc = accuracy_score(y_test, predictions)
-               #     print(f"Kernel: {kernel}, Gamma: {gamma}, C: {C}, Degree: {degree}, Accuracy: {acc:.4f}")
+                    print(f"Kernel: {kernel}, Gamma: {gamma}, C: {C}, Degree: {degree}, Accuracy: {acc:.4f}")
                     results.append({
                      'Kernel': kernel,
                      'Gamma': gamma,
@@ -187,7 +187,7 @@ for kernel in kernels:
                 model.fit(x_train, y_train)
                 predictions = model.predict(x_test)
                 acc = accuracy_score(y_test, predictions)
-              #  print(f"Kernel: {kernel}, Gamma: {gamma}, C: {C}, Accuracy: {acc:.4f}")
+                print(f"Kernel: {kernel}, Gamma: {gamma}, C: {C}, Accuracy: {acc:.4f}")
                 results.append({
                      'Kernel': kernel,
                      'Gamma': gamma,
