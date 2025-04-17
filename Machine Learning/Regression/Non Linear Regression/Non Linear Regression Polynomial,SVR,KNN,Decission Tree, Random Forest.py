@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
  
-dataset=pd.read_csv(r"C:\Users\sai.venkat\OneDrive\DataScience\Python\PYTHON_BIGINNER\Machine Learning\Non Linear Regression\emp_sal.csv")
+dataset=pd.read_csv(r"D:\Education\Datascience\PYTHON_BIGINNER\Machine Learning\Regression\Non Linear Regression\emp_sal.csv")
 x=dataset.iloc[:,1:2].values
 y=dataset.iloc[:,2].values
 
@@ -29,6 +29,7 @@ print(c)
 
 simplelinear=lin_reg.predict([[6.5]])
 print(simplelinear)
+
 
 # polynomial regression  (Non Linear)
 
@@ -295,12 +296,42 @@ dt_reg.fit(x,y)
 dt_model_pred_absolute_error=dt_reg.predict([[6.5]])
 print(dt_model_pred_absolute_error)
 
+
+
 #Random Forest
+'''
 from sklearn.ensemble import RandomForestRegressor
 rf_reg=RandomForestRegressor()  
 rf_reg.fit(x,y)
 rf_model_pred=rf_reg.predict([[6.5]])
 print(rf_model_pred)
+y_pred_rf = rf_reg.predict(x)
+rf_reg = RandomForestRegressor(random_state=0)
+rf_reg.fit(x, y)
+
+print("R² Score - Random Forest:", r2_score(y, y_pred_rf))
+
+'''
+
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import r2_score
+
+# Random Forest - model without random_state
+rf_reg_default = RandomForestRegressor()
+rf_reg_default.fit(x, y)
+rf_model_pred_default = rf_reg_default.predict([[6.5]])
+y_pred_rf_default = rf_reg_default.predict(x)
+print("Random Forest Prediction (default):", rf_model_pred_default)
+print("R² Score - Random Forest (default):", r2_score(y, y_pred_rf_default))
+
+# Random Forest - model with random_state=0
+rf_reg_fixed = RandomForestRegressor(random_state=0)
+rf_reg_fixed.fit(x, y)
+rf_model_pred_fixed = rf_reg_fixed.predict([[6.5]])
+y_pred_rf_fixed = rf_reg_fixed.predict(x)
+print("Random Forest Prediction (random_state=0):", rf_model_pred_fixed)
+print("R² Score - Random Forest (random_state=0):", r2_score(y, y_pred_rf_fixed))
+
 
 # hyper parameter tuning
 # random_state=0 prediction will be constant.
@@ -331,10 +362,13 @@ print('svr_model_pred_hyperparamtuning_linear',svr_model_pred_hyperparamtuning_l
 print('knn_model_pred',knn_model_pred)
 print('knn_model_pred_hyperparam_tuning_10neighbour',knn_model_pred_hyperparam_tuning_10neighbour)
 #print('knn_model_pred_hyperparam_tuning_25neighbour',knn_model_pred_hyperparam_tuning_25neighbour)
+
 print(dt_model_pred)
 print(dt_model_pred_absolute_error)
-print(rf_model_pred)
+
+# print(rf_model_pred)
 print(rf_model_pred_random_state)
+
 
 
 
