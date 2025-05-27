@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/573853177916985196/b7882f10052341caaec12474bf140ff1/artifacts
+end_time: 1748356024894
+entry_point_name: ''
+experiment_id: '573853177916985196'
+lifecycle_stage: active
+run_id: b7882f10052341caaec12474bf140ff1
+run_name: angry-hen-830
+run_uuid: b7882f10052341caaec12474bf140ff1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748355992813
+status: 4
+tags: []
+user_id: csair

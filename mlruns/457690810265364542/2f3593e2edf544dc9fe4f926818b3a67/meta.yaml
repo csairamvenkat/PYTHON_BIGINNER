@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/457690810265364542/2f3593e2edf544dc9fe4f926818b3a67/artifacts
+end_time: 1748356242955
+entry_point_name: ''
+experiment_id: '457690810265364542'
+lifecycle_stage: active
+run_id: 2f3593e2edf544dc9fe4f926818b3a67
+run_name: XGBClassifier
+run_uuid: 2f3593e2edf544dc9fe4f926818b3a67
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748356224942
+status: 3
+tags: []
+user_id: csair

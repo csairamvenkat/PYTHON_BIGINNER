@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/457690810265364542/9ae86fd29dca43cd8521dc97605906d9/artifacts
+end_time: 1748356260762
+entry_point_name: ''
+experiment_id: '457690810265364542'
+lifecycle_stage: active
+run_id: 9ae86fd29dca43cd8521dc97605906d9
+run_name: XGBClassifier With SMOTE
+run_uuid: 9ae86fd29dca43cd8521dc97605906d9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748356243084
+status: 3
+tags: []
+user_id: csair

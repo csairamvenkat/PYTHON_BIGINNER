@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/457690810265364542
+creation_time: 1748356175619
+experiment_id: '457690810265364542'
+last_update_time: 1748356175619
+lifecycle_stage: active
+name: imbalanced classification
