@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Education/Datascience/PYTHON_BIGINNER/mlruns/358059429111168034/966cd61dcaf94f909fc9b2ecba25033b/artifacts
+end_time: 1748527072685
+entry_point_name: ''
+experiment_id: '358059429111168034'
+lifecycle_stage: active
+run_id: 966cd61dcaf94f909fc9b2ecba25033b
+run_name: casual-steed-829
+run_uuid: 966cd61dcaf94f909fc9b2ecba25033b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748527057511
+status: 3
+tags: []
+user_id: csair

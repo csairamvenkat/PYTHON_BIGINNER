@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1748527057319
+current_stage: None
+description: null
+last_updated_timestamp: 1748527057319
+name: Logistic_Regression_Model
+run_id: a0a6403b1bea4a5e9c83c22c04192baa
+run_link: null
+source: file:///D:/Education/Datascience/PYTHON_BIGINNER/mlruns/358059429111168034/a0a6403b1bea4a5e9c83c22c04192baa/artifacts/logistic_regression_model
+status: READY
+status_message: null
+storage_location: file:///D:/Education/Datascience/PYTHON_BIGINNER/mlruns/358059429111168034/a0a6403b1bea4a5e9c83c22c04192baa/artifacts/logistic_regression_model
+user_id: null
+version: 1
