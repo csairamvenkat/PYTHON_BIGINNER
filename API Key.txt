@@ -1,5 +1,5 @@
 #Remove 1 at the end for all keys
 # GROQ_API_KEY : gsk_ukAdPSNZx1sYlcBNf556WGdyb3FYQvKGV5gLeKvYx4e1w5WuhheJ1
 # LANGCHAIN_API_KEY : lsv2_pt_d10d2b60eb224bf1b116efc873f7df1d_40b232f8ff1
-# Google API Key : AIzaSyAnZEfDI7xQGvJCchJXaN95lP0XXtxAqY01
-#Hugging Face :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1
+# Google API Key : AIzaSyAIAtECM2LIs4b_Y7RW1DOsKPlMMuojoPw
+#Hugging Face :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1
